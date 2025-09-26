@@ -1,0 +1,42 @@
+name: Task / Unit of Work
+description: Break down assignments, exams, or projects into actionable units.
+title: "[Task] <Short Description>"
+labels: ["task", "sub-issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Task / Unit of Work
+
+        Use this template for sub-issues or individual tasks that are part of a larger assignment, project, or study plan.
+  - type: input
+    id: parent
+    attributes:
+      label: Parent Issue
+      description: Link to the main assignment or exam issue this task supports.
+      placeholder: "#<issue-number> or URL"
+  - type: textarea
+    id: description
+    attributes:
+      label: Task Description
+      description: Describe what needs to be done.
+  - type: input
+    id: due_date
+    attributes:
+      label: Task Due Date (if different)
+      description: Optional: When is this task due?
+      placeholder: "YYYY-MM-DD"
+  - type: checkboxes
+    id: status
+    attributes:
+      label: Status
+      options:
+        - label: "Not started"
+        - label: "In progress"
+        - label: "Blocked"
+        - label: "Completed"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Any extra information for this task.
