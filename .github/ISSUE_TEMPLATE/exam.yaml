@@ -1,0 +1,44 @@
+name: Exam/Quiz
+description: Track an upcoming exam, quiz, or test and related study objectives.
+title: "[Exam] <Course>: <Exam Name or Topic>"
+labels: ["exam", "school"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Exam/Quiz Overview
+
+        Use this issue to track an upcoming exam, quiz, or test, and organize your study plan.
+  - type: input
+    id: course
+    attributes:
+      label: Course
+      description: The course or subject this exam/quiz belongs to.
+      placeholder: "e.g. Calculus II"
+  - type: input
+    id: exam_name
+    attributes:
+      label: Exam Name/Topic
+      description: The name or main topic of the exam/quiz.
+      placeholder: "e.g. Midterm 1: Integrals"
+  - type: input
+    id: exam_date
+    attributes:
+      label: Exam/Quiz Date
+      description: When is the exam or quiz scheduled?
+      placeholder: "YYYY-MM-DD"
+  - type: textarea
+    id: topics
+    attributes:
+      label: Topics to Cover
+      description: List the topics, chapters, or units you need to study.
+  - type: textarea
+    id: study_plan
+    attributes:
+      label: Study Plan / Subtasks
+      description: Outline your study plan or link to related 'Task' issues for each study unit.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Additional notes (e.g., exam format, resources, accommodations).

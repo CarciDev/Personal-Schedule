@@ -1,0 +1,55 @@
+name: Assignment
+description: Track an assignment, coursework, or major deliverable.
+title: "[Assignment] <Course>: <Assignment Name>"
+labels: ["assignment", "school"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Assignment Overview
+
+        Use this issue to track a specific assignment, project, or coursework deadline.
+  - type: input
+    id: course
+    attributes:
+      label: Course
+      description: The course or subject this assignment belongs to.
+      placeholder: "e.g. Introduction to Algorithms"
+  - type: input
+    id: assignment_name
+    attributes:
+      label: Assignment Name
+      description: The official or descriptive name of the assignment.
+      placeholder: "e.g. Homework 3: Sorting Algorithms"
+  - type: textarea
+    id: description
+    attributes:
+      label: Assignment Details
+      description: Describe the assignment requirements, links to rubrics, and other important context.
+  - type: input
+    id: due_date
+    attributes:
+      label: Due Date
+      description: When is the assignment due?
+      placeholder: "YYYY-MM-DD"
+  - type: checkboxes
+    id: progress
+    attributes:
+      label: Assignment Progress
+      options:
+        - label: "Requirements reviewed"
+        - label: "Research completed"
+        - label: "Draft started"
+        - label: "Draft completed"
+        - label: "Reviewed/Edited"
+        - label: "Submitted"
+  - type: textarea
+    id: subtasks
+    attributes:
+      label: Related Tasks/Sub-Issues
+      description: Link to or describe related tasks or sub-issues (use the 'Task' template below).
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Any additional notes, links, or comments.
